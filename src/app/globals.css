@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* body,
+html {
+  position: relative;
+  overflow-x: hidden;
+} */
+.class-1 {
+  overflow: hidden;
+  height: 100vh;
+}
+.line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #000;
+  transition: 0.5s;
+}
+.links {
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 74px;
+  height: calc(100vh - 73px);
+}
+.lines {
+  width: calc(100% - 16px);
+  margin: auto;
+  height: 1px;
+  background-color: #cccccc;
+}
+.calender > div > div {
+  width: 100%;
+}
+.calender button {
+  border-radius: 8px;
+}
+.calender button[aria-selected="true"] {
+  background-color: #2e7de1 !important;
+}
+.calender tr {
+  justify-content: space-evenly;
+}
+.reserve {
+  height: 360px !important;
+}
+.calender button[aria-selected="true"] {
+  color: white !important;
+}
+@media (max-width: 768px) {
+  .rows {
+    grid-row: 4;
+  }
+  .reserve {
+    height: auto !important;
+  }
+}
+@layer components {
+  .padding-Y {
+    @apply sm:py-12 py-6;
+  }
+  .padding-X {
+    @apply sm:px-20 px-8;
+  }
+  .paddings {
+    @apply sm:px-20 px-8 sm:py-12 py-6;
+  }
+}
